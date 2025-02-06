@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const Footer = () => {
@@ -5,13 +6,13 @@ export const Footer = () => {
     <footer className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-8 mx-auto">
         <div className="flex flex-col items-center text-center">
-          <a href="#">
+          <Link href="#">
             <img
               className="w-auto h-7"
               src="https://merakiui.com/images/full-logo.svg"
               alt=""
             />
-          </a>
+          </Link>
 
           <p className="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -46,29 +47,29 @@ export const Footer = () => {
           </p>
 
           <div className="flex mt-3 -mx-2 sm:mt-0">
-            <a
+            <Link
               href="#"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
               aria-label="Reddit">
               {" "}
               Teams{" "}
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
               aria-label="Reddit">
               {" "}
               Privacy{" "}
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
               aria-label="Reddit">
               {" "}
               Cookies{" "}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

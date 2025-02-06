@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { Field, Label, Switch } from "@headlessui/react";
+import Link from "next/link";
 
 export default function Example() {
   const [agreed, setAgreed] = useState(false);
@@ -162,9 +163,9 @@ export default function Example() {
             </div>
             <Label className="text-sm/6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              <Link href="#" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
-              </a>
+              </Link>
               .
             </Label>
           </Field>
@@ -173,7 +174,7 @@ export default function Example() {
           <button
             type="submit"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            Let's talk
+            Let&apos;s talk
           </button>
         </div>
       </form>
