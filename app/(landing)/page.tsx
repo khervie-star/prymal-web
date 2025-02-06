@@ -9,16 +9,11 @@ import { GithubIcon } from "@/components/icons";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import hero from "@/assets/images/hero-1.jpg"
-        import {
-          ArrowPathIcon,
-          CloudArrowUpIcon,
-          FingerPrintIcon,
-          LockClosedIcon,
-        } from "@heroicons/react/24/outline";
 import { AnimatedGradientText } from "@/components/animated-gradient-text";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Squirrel, HeartPulse, Rabbit, Wallet, CloudSun } from "lucide-react";
+import screenshot from "@/assets/images/screenshot.png"
 
 const features = [
   {
@@ -75,19 +70,18 @@ export default function Home() {
           </div>
           <div className="flex gap-3 mt-6">
             <Link
-              isExternal
+              // isExternal
               className={buttonStyles({
                 color: "primary",
                 radius: "full",
                 variant: "shadow",
               })}
-              href={siteConfig.links.docs}>
+              href={"/wait-list"}>
               Join waitlist
             </Link>
             <Link
-              isExternal
               className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={siteConfig.links.github}>
+              href={"#"}>
               Learn more
               <ArrowRight size={20} />
             </Link>
@@ -188,13 +182,13 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative mt-16 h-80 lg:mt-8">
+            <div className="relative mt-16 h-[480px] lg:mt-8">
               <img
                 alt="App screenshot"
-                src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+                src={screenshot.src}
                 width={1824}
                 height={1080}
-                className="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                className="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10 object-cover"
               />
             </div>
           </div>

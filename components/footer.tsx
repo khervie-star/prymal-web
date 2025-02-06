@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/public/prymal-removebg-preview.png";
+import { Button } from "@heroui/button";
 
 
 export const Footer = () => {
@@ -42,9 +43,9 @@ export const Footer = () => {
               <span className="mx-1">Contact us</span>
             </button>
 
-            <button className="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-primary/80 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+            <Button href="/wait-list" className="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-primary/80 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
               Join waitlist
-            </button>
+            </Button>
           </div>
         </div>
 

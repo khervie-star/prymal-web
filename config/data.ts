@@ -4,21 +4,21 @@ import img3 from "@/assets/images/slider-3.jpg";
 
 export const authScreenSliders: any[] = [
   {
-    title: "Expand Your Reach",
+    title: "Optimize Herd Management",
     description:
-      "Join our platform to connect with thousands of customers in your area. Boost your visibility and grow your business effortlessly.",
-    image: img1
+      "Take control of your livestock with advanced herd tracking and management tools. Monitor animal health, growth, and performance metrics effortlessly.",
+    image: img1,
   },
   {
-    title: "Seamless Order Management",
+    title: "Real-Time Health Monitoring",
     description:
-      "Manage orders with ease using our intuitive dashboard. Track, prepare, and deliver meals while providing exceptional service to your customers.",
-    image: img2
+      "Stay ahead of potential issues with real-time health alerts and IoT-enabled tracking. Ensure your animals are healthy and thriving at all times.",
+    image: img2, 
   },
   {
-    title: "Boost Your Sales",
+    title: "Boost Farm Productivity",
     description:
-      "Leverage our platform to increase your revenue. Tap into a larger audience, offer exclusive deals, and watch your profits grow.",
-    image: img3
-  }
+      "Increase your farm's efficiency and profitability with data-driven insights. Track feed usage, breeding schedules, and financial performance in one place.",
+    image: img3,
+  },
 ];
