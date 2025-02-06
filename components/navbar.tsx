@@ -28,9 +28,11 @@ import {
   Logo,
 } from "@/components/icons";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 export const Navbar = () => {
   const pathName = usePathname();
+  const [isActive, setIsActive] = React.useState<boolean>(false);
   const searchInput = (
     <Input
       aria-label="Search"
@@ -53,7 +55,12 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky" isBordered>
+    <HeroUINavbar
+      maxWidth="xl"
+      position="sticky"
+      isBordered
+      isMenuOpen={isActive}
+      onMenuOpenChange={setIsActive}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -107,14 +114,18 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link> */}
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle
+     
+        />
       </NavbarContent>
 
       <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem
+              key={`${item}-${index}`}
+              onClick={() => setIsActive(false)}>
               <Link
                 className={clsx(
                   linkStyles({ color: "foreground" }),
