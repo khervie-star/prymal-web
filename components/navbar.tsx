@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -25,8 +27,10 @@ import {
   SearchIcon,
   Logo,
 } from "@/components/icons";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const pathName = usePathname();
   const searchInput = (
     <Input
       aria-label="Search"
@@ -49,7 +53,7 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="xl" position="sticky" isBordered>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -62,12 +66,15 @@ export const Navbar = () => {
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end">
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-6 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
+                  pathName == item.href
+                    ? "text-primary font-bold"
+                    : " text-black",
                   "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
@@ -82,19 +89,17 @@ export const Navbar = () => {
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end">
-    
-            <NavbarItem>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-full text-white px-4 py-1"
-                )}
-                color="foreground"
-                href={"#"}>
-               Join waitlist
-              </NextLink>
-            </NavbarItem>
-      
+        <NavbarItem>
+          <NextLink
+            className={clsx(
+              linkStyles({ color: "foreground" }),
+              "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-full text-white px-4 py-1"
+            )}
+            color="foreground"
+            href={"#"}>
+            Join waitlist
+          </NextLink>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
@@ -111,6 +116,10 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-full text-white px-4 py-1"
+                )}
                 color={
                   index === 2
                     ? "primary"
@@ -118,7 +127,7 @@ export const Navbar = () => {
                       ? "danger"
                       : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg">
                 {item.label}
               </Link>

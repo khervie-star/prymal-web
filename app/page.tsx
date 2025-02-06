@@ -18,39 +18,40 @@ import hero from "@/assets/images/hero-1.jpg"
 import { AnimatedGradientText } from "@/components/animated-gradient-text";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Squirrel, HeartPulse, Rabbit, Wallet, CloudSun } from "lucide-react";
 
-        const features = [
-          {
-            name: "Herd Management",
-            description:
-              "Track and manage your livestock with unique identification and comprehensive profile.",
-            icon: CloudArrowUpIcon,
-          },
-          {
-            name: "Health Monitoring",
-            description:
-              "Real-time health tracking and automated alerts for vaccinations and emergencies.",
-            icon: LockClosedIcon,
-          },
-          {
-            name: "Breeding Management",
-            description:
-              "Optimize reproduction with mating schedules, pregnancy tracking, and automated reminders.",
-            icon: ArrowPathIcon,
-          },
-          {
-            name: "Financial Insights",
-            description:
-              "Track income, expenses, and profitability with integrated payment systems.",
-            icon: FingerPrintIcon,
-          },
-          {
-            name: "Environmental Monitoring",
-            description:
-              "Monitor barn conditions, pasture quality, and weather data for better decision-making.",
-            icon: FingerPrintIcon,
-          },
-        ];
+const features = [
+  {
+    name: "Herd Management",
+    description:
+      "Track and manage your livestock with unique identification and comprehensive profile.",
+    icon: Squirrel, // Represents livestock clearly
+  },
+  {
+    name: "Health Monitoring",
+    description:
+      "Real-time health tracking and automated alerts for vaccinations and emergencies.",
+    icon: HeartPulse, // Represents health tracking and monitoring
+  },
+  {
+    name: "Breeding Management",
+    description:
+      "Optimize reproduction with mating schedules, pregnancy tracking, and automated reminders.",
+    icon: Rabbit, // Symbolizes breeding and reproduction
+  },
+  {
+    name: "Financial Insights",
+    description:
+      "Track income, expenses, and profitability with integrated payment systems.",
+    icon: Wallet, // Represents finances and payment tracking
+  },
+  {
+    name: "Environmental Monitoring",
+    description:
+      "Monitor barn conditions, pasture quality, and weather data for better decision-making.",
+    icon: CloudSun, // Represents weather and environmental monitoring
+  },
+];
 
         
 

@@ -2,10 +2,10 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const tiers = [
   {
-    name: "Hobby",
-    id: "tier-hobby",
+    name: "Basic",
+    id: "tier-basic",
     href: "#",
-    priceMonthly: "$29",
+    priceMonthly: "$0",
     description:
       "The perfect plan if you're just getting started with our product.",
     features: [
@@ -53,7 +53,7 @@ export default function Example() {
         />
       </div>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base/7 font-semibold text-indigo-600">Pricing</h2>
+        <h2 className="text-base/7 font-semibold text-primary">Pricing</h2>
         <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
           Choose the right plan for you
         </p>
@@ -80,7 +80,7 @@ export default function Example() {
             <h3
               id={tier.id}
               className={classNames(
-                tier.featured ? "text-indigo-400" : "text-indigo-600",
+                tier.featured ? "text-primary" : "text-primary",
                 "text-base/7 font-semibold"
               )}>
               {tier.name}
@@ -118,7 +118,7 @@ export default function Example() {
                   <CheckIcon
                     aria-hidden="true"
                     className={classNames(
-                      tier.featured ? "text-indigo-400" : "text-indigo-600",
+                      tier.featured ? "text-primary" : "text-primary",
                       "h-6 w-5 flex-none"
                     )}
                   />
@@ -131,8 +131,8 @@ export default function Example() {
               aria-describedby={tier.id}
               className={classNames(
                 tier.featured
-                  ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                  : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                  ? "bg-primary text-white shadow-xs hover:bg-primary focus-visible:outline-primary"
+                  : "text-primary ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-primary",
                 "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
               )}>
               Get started today
