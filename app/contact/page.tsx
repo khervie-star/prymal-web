@@ -10,9 +10,9 @@ export default function Example() {
 
   return (
 <section className="bg-white dark:bg-gray-900">
-  <div className="container px-6 py-12 mx-auto">
+  <div className="container py-12 mx-auto">
     <div>
-      <p className="font-medium text-primary dark:text-blue-400">Contact us</p>
+      <p className="font-medium text-primary">Contact us</p>
 
       <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
         Chat to our friendly team

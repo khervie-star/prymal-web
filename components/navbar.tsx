@@ -118,15 +118,16 @@ export const Navbar = () => {
               <Link
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-full text-white px-4 py-1"
+                  pathName == item.href
+                    ? "text-primary font-bold"
+                    : " text-black",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
+                // color={
+                //   item.href === "/wait-list"
+                //     ? "primary"
+                //     : ""
+                // }
                 href={item.href}
                 size="lg">
                 {item.label}
