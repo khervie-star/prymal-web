@@ -16,7 +16,7 @@ import hero from "@/assets/images/hero-1.jpg"
           LockClosedIcon,
         } from "@heroicons/react/24/outline";
 import { AnimatedGradientText } from "@/components/animated-gradient-text";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
         const features = [
@@ -59,7 +59,7 @@ import { cn } from "@/lib/utils";
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-center">
+      <div className="flex flex-col lg:flex-row gap-10 items-center">
         <div className="inline-block max-w-xl flex-1">
           <span className={title()}>Revolutionize Your&nbsp; </span>
           <span className={title({ color: "green" })}>
@@ -87,8 +87,8 @@ export default function Home() {
               isExternal
               className={buttonStyles({ variant: "bordered", radius: "full" })}
               href={siteConfig.links.github}>
-              <GithubIcon size={20} />
               Learn more
+              <ArrowRight size={20} />
             </Link>
           </div>
         </div>
