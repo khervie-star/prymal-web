@@ -53,7 +53,7 @@ export const siteConfig = {
 
     {
       label: "Join waitlist",
-      href: "#",
+      href: "/wait-list",
     },
   ],
   links: {

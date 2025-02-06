@@ -9,26 +9,20 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
 import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import logo from "@/public/prymal-removebg-preview.png";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 export const Navbar = () => {
   const pathName = usePathname();
@@ -64,8 +58,13 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <Image
+              src={logo}
+              alt="Prymal Livestock Solutions Ltd"
+              width={100}
+              height={30}
+            />
+            {/* <p className="font-bold text-inherit">ACME</p> */}
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -100,10 +99,10 @@ export const Navbar = () => {
           <NextLink
             className={clsx(
               linkStyles({ color: "foreground" }),
-              "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-full text-white px-4 py-1"
+              "data-[active=true]:text-primary data-[active=true]:font-medium bg-primary rounded-[8px] text-white px-7 py-2"
             )}
             color="foreground"
-            href={"#"}>
+            href={"/wait-list"}>
             Join waitlist
           </NextLink>
         </NavbarItem>
@@ -114,9 +113,7 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link> */}
         <ThemeSwitch />
-        <NavbarMenuToggle
-     
-        />
+        <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
