@@ -100,7 +100,7 @@ export default function Home() {
 
       <div className="py-10 md:py-20 lg:py-30">
         <div className="bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-2xl lg:text-center">
               <AnimatedGradientText>
                 🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
@@ -147,7 +147,7 @@ export default function Home() {
 
       {/* CTA */}
       <div className="bg-white w-full">
-        <div className="mx-auto w-full sm:px-6">
+        <div className="mx-auto w-full">
           <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
